@@ -110,13 +110,19 @@ def reqmech(request):
         message="NO-"
     return HttpResponse(message)
 
+@csrf_exempt
 def chkreq(request):
-    if request.method == "GET":
-        r1=request.GET.get('time')
-        t1=datetime.strptime(r1, '%Y-%m-%d %H:%M:%S')
-        r2=request.GET.get('mechid')
-        t=datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        from minor.models import trnx
+    if request.method == "POST":
+        r1=request.POST.get('time')
+        try:
+            t1=datetime.strptime(r1, '%Y-%m-%d %H:%M:%S')
+            r2=request.POST.get('mechid')
+            from minor.models import trnx  
+            q=trnx.objects.filter(time__gte=t1)
+            q1=q.filter(mechid=r2)
+            message="OK-"+str(serializers.serialize('json', q1))
+        except Exception as e:
+            message="ER-"+str(e)    
     else:
         message="NO-"
         

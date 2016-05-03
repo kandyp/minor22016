@@ -42,6 +42,10 @@ class mechanic(models.Model):
 	phone=models.CharField(max_length=15)
 	email=models.CharField(max_length=50,null=True)
 	shop=models.CharField(max_length=50)
+	#self.photo = models.ImageField(upload_to='mechanic/'self.username)
+	def imgdef(self):
+		self.photo = models.ImageField(upload_to='mechanic/'+self.usrname)
+
 
 class rider(models.Model):
 	""" Username/Rider details"""
@@ -64,6 +68,7 @@ class trnx(models.Model):
 	usrid=models.IntegerField(null=True)
 	mechid=models.IntegerField(null=True)
 	damage=models.CharField(max_length=500, blank=True)
+	ack=models.BooleanField(default=False)
 
 
 	

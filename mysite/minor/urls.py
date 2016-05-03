@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import include,url
 from django.contrib import admin
 
 from . import views
@@ -13,6 +13,6 @@ urlpatterns = [
     url(r'^loginusr/$', views.loginusr , name='loginusr'),
     url(r'^loginmech/$', views.loginmech , name='loginmech'),
     url(r'^findmech/$', views.findmech , name='findmech'),
-
+    #url(r'^img/$', include('img.urls')),
     #url(r'^admin/', include(admin.site.urls)),
 ]
