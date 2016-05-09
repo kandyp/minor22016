@@ -25,7 +25,7 @@ SECRET_KEY = 'd=7%+wo@lx0zu!3xmr8ldhzxl9wscahl!3jwtc8wo3popx)%#a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
-    'polls',
     'minor',
     'django.contrib.gis',
+    #'minor.img',
     #'world',
 ]
 
@@ -122,5 +122,5 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-MEDIA_ROOT = os.path.join(BASE_DIR, 'minor/img')
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'minor/img')
 STATIC_URL = '/static/'

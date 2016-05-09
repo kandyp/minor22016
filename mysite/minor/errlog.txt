@@ -1,0 +1,9 @@
+2016-05-07-21:47:31->init
+2016-05-07-21:48:01->init
+2016-05-07-21:48:06->init
+2016-05-07-21:48:16->init
+2016-05-09-12:19:20->uid=10[Errno 22] invalid mode ('r+') or filename: u'c:\\django\\mysite\\minor\\user\\10_q\\2016-05-09-12:19:20.txt'
+2016-05-09-13:36:56->uid=0[Errno 22] invalid mode ('r+') or filename: 'c:\\django\\mysite\\minor\\user\\0_admin\\2016-05-09-13:36:56.txt'
+2016-05-09-13:40:33->uid=0[Errno 22] invalid mode ('r+') or filename: 'c:\\django\\mysite\\minor\\user\\0_admin\\2016-05-09-13:40:33.txt'
+2016-05-09-13:41:25->uid=0[Errno 22] invalid mode ('a+') or filename: 'c:\\django\\mysite\\minor\\user\\0_admin\\2016-05-09-13:41:25.txt'
+2016-05-09-13:44:01->uid=0global name 'transactions' is not defined
